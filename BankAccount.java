@@ -10,4 +10,15 @@ public class BankAccount{
 	password = p;
     }
 
+    public double getBalance(){
+        return balance;
+    }
+
+    public int getAccountID(){
+        return accountID;
+    }
+
+    public void setPassword(String pd){
+        password = pd;
+    }
 }
