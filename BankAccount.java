@@ -39,7 +39,7 @@ public class BankAccount{
     }
 
     public String toString(){
-        return String.valueOf(accountID)+"\t"+String.valueOf(balance);
+        return "#"+String.valueOf(accountID)+"\t$"+String.valueOf(balance);
     }
 
 }
