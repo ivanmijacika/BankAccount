@@ -2,6 +2,7 @@ public class BankTest{
 
     public static void main(String[] args){
 	BankAccount account1 = new BankAccount(12345, "blackclover");
+	BankAccount account2 = new BankAccount(100, "FMA");
 	System.out.println(account1.toString());
 
 	System.out.println(account1.getBalance());
@@ -23,6 +24,12 @@ public class BankTest{
 	System.out.println(account1.deposit(69420));
 	System.out.println(account1.toString());
 
+	System.out.println(account1.transferTo(account2, 69000, "hxh"));
+	System.out.println(account1.transferTo(account2, 70000, "HxH"));
+	System.out.println(account1.transferTo(account2, -69000, "HxH"));
+	System.out.println(account1.transferTo(account2, 69000, "HxH"));
+	System.out.println(account1);
+	System.out.println(account2);
     }
 
 }

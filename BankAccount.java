@@ -39,7 +39,7 @@ public class BankAccount{
     }
 
     public String toString(){
-        return "#"+String.valueOf(accountID)+"\t$"+String.valueOf(balance);
+        return "#"+accountID+"\t$"+balance;
     }
 
     private boolean authenticate(String password){
@@ -48,9 +48,8 @@ public class BankAccount{
 
     public boolean transferTo(BankAccount other, double amount, String password){
 	if (authenticate(password) && withdraw(amount)){
-	    if (other.deposit(amount)){
-		return true;
-	    }
+	    other.deposit(amount);
+	    return true;
 	}
 	return false;
     }
